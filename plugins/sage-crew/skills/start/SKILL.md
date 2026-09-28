@@ -21,8 +21,9 @@ Before any step, check the path above. It must start with `/`, and it
 must not hold the text `${` or a single quote. If it fails a check,
 stop, and tell the operator in one line.
 
-1. Run `trellis-crew --help`. If the command is missing, or the help
-   does not list `start` and `--roles`, tell the operator in one line
+1. Run `trellis-crew --help`. If the command is missing, or the help's
+   `start` line does not list both `--roles` and `--yes`, tell the
+   operator in one line
    that the trellis-crew command line tool is not installed, and point
    to https://github.com/sageadvicellc/trellis-crew#readme. Stop there.
    Never install, download, or build the tool yourself.
