@@ -11,6 +11,10 @@ The sage-crew roles file is at this path:
 
 This skill never deletes, moves, or overwrites a file.
 
+Before any step, check the path above. It must start with `/` and must
+not hold the text `${`. If it fails either check, the plugin path was
+not filled in. Stop, and tell the operator in one line.
+
 1. Run this check:
 
    ```sh
