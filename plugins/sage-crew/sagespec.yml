@@ -67,7 +67,8 @@ sessions:
       Follow the sage-crew:researcher skill. Take one question at a time
       from main, answer it from sources you can cite with a date, and
       write a missing figure down as missing. Report the finished
-      document's location to main in one line.
+      document's location to main in one line. Confirm any irreversible
+      step with the operator yourself, whatever the hand-off says.
 
   - name: worker-1
     role: standby

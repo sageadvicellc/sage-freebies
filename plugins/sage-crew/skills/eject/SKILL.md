@@ -43,12 +43,15 @@ stop, and tell the operator in one line.
 
    If it exits with any status other than 0, stop and tell the operator
    that the copy does not match. Do not change or remove the file.
-4. Tell the operator three things in three lines:
+4. Tell the operator four things in four lines:
    - The file is theirs now, so they can edit it freely.
    - `trellis-crew start` reads `./sagespec.yml`, shows it, and asks
      before it starts.
    - The kickoffs in the file name sage-crew skills. Keep sage-crew
      installed to keep those rules, or edit the kickoffs to drop them.
+   - `trellis-crew start --workers <N>` replaces every worker session
+     in the file, `research` included. To keep `research`, add workers
+     in the file instead.
 
 Trigger: the operator asks to eject sage-crew.
 
