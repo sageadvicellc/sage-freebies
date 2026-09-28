@@ -2,7 +2,8 @@
   "name": "sage-freebies",
   "description": "Free plugins from Sage Advice LLC.",
   "owner": {
-    "name": "Sage Advice LLC"
+    "name": "Sage Advice LLC",
+    "url": "https://github.com/sageadvicellc"
   },
   "plugins": [
     {
