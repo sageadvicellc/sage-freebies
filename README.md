@@ -16,4 +16,4 @@ claude plugin install sage-crew@sage-freebies
 
 The sage-crew skills keep their source name as a prefix. Call them as `trellis-crew:<skill>`, for example `trellis-crew:department-lead`.
 
-If you installed `trellis-crew@sage-freebies` before, Claude Code v2.1.193 or later moves your settings to sage-crew. Then run `claude plugin install sage-crew@sage-freebies` once.
+If you installed `trellis-crew@sage-freebies` before, run `claude plugin marketplace update sage-freebies`. Claude Code v2.1.193 or later then moves your settings to sage-crew. Then run `claude plugin install sage-crew@sage-freebies` once.
