@@ -2,8 +2,9 @@
 # The sage-crew:start skill passes this file to `trellis-crew start --roles`.
 # The sage-crew:eject skill copies it to ./sagespec.yml, where
 # `trellis-crew start` reads it with no flag.
-# The team layout matches the trellis-crew default team. The lead and the
-# reporting chain also follow the sage-crew skills.
+# The team layout is the trellis-crew default team plus a research
+# worker. The lead, the reporting chain, and the research worker also
+# follow the sage-crew skills.
 
 version: 1
 harness: auto            # auto | claude-code | qwen-code | hermes | codex | amp | opencode
@@ -34,16 +35,17 @@ sessions:
   - name: main
     role: lead
     reports_to: personal-assistant
-    workers: [worker-1, worker-2, worker-3]
+    workers: [worker-1, worker-2, worker-3, research]
     autocompact: 600k
     kickoff: |
       You are the lead. You hold the main body of work and you own the
       workers listed for you. Send each unit of work to one worker by name
       with the three-part hand-off contract: the unit, the done signal,
-      and where the result will live. Report one line per change to the
-      reporting chain. Pose every decision for the operator as the
-      sage-crew:lead-decisions skill says, and write the pool report the
-      same way.
+      and where the result will live. Send research only research
+      questions, and pass on the reporting chain's research questions to
+      it. Report one line per change to the reporting chain. Pose every
+      decision for the operator as the sage-crew:lead-decisions skill
+      says, and write the pool report the same way.
 
   - name: benchmark
     role: auditor
@@ -57,14 +59,15 @@ sessions:
       another session relayed.
 
   - name: research
-    role: researcher
-    reports_to: personal-assistant
+    role: standby
+    reports_to: main
     autocompact: 600k
     kickoff: |
-      You are research. Take one question at a time from the reporting
-      chain or the lead, answer it from sources you can cite with a date,
-      and write a missing figure down as missing. Report the finished
-      document's location in one line.
+      You are research, a worker that takes research questions only.
+      Follow the sage-crew:researcher skill. Take one question at a time
+      from main, answer it from sources you can cite with a date, and
+      write a missing figure down as missing. Report the finished
+      document's location to main in one line.
 
   - name: worker-1
     role: standby
