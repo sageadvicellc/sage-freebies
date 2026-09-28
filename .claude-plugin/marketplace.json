@@ -8,6 +8,7 @@
   "plugins": [
     {
       "name": "trellis-crew",
+      "displayName": "trellis-crew",
       "description": "Sets up a small team of agent sessions that split work, hand off tasks, and report status.",
       "source": {
         "source": "url",
@@ -17,6 +18,15 @@
       "license": "MIT",
       "category": "productivity",
       "keywords": ["multi-session", "agent-coordination", "trellis"]
+    },
+    {
+      "name": "sage-crew",
+      "displayName": "sage-crew",
+      "description": "Runs a trellis-crew team the Sage way: decision comments with defaults, one status table per report, and a preset roles file you can start or eject. Installs trellis-crew with it.",
+      "source": "./plugins/sage-crew",
+      "license": "MIT",
+      "category": "productivity",
+      "keywords": ["multi-session", "agent-coordination", "trellis", "preset"]
     }
   ]
 }
