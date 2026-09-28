@@ -7,7 +7,8 @@
   },
   "plugins": [
     {
-      "name": "trellis-crew",
+      "name": "sage-crew",
+      "displayName": "sage-crew",
       "description": "Sets up a small team of agent sessions that split work, hand off tasks, and report status.",
       "source": {
         "source": "url",
