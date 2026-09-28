@@ -1,0 +1,21 @@
+{
+  "name": "sage-freebies",
+  "description": "Free plugins from Sage Advice LLC.",
+  "owner": {
+    "name": "Sage Advice LLC"
+  },
+  "plugins": [
+    {
+      "name": "trellis-crew",
+      "description": "Sets up a small team of agent sessions that split work, hand off tasks, and report status.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/sageadvicellc/trellis-crew.git",
+        "sha": "766d2be8548690f8406c9fafebef5b126f45d098"
+      },
+      "license": "MIT",
+      "category": "productivity",
+      "keywords": ["multi-session", "agent-coordination", "trellis"]
+    }
+  ]
+}
