@@ -10,10 +10,24 @@ claude plugin marketplace add sageadvicellc/sage-freebies
 claude plugin install sage-crew@sage-freebies
 ```
 
+Add the marketplace by its repository name, as above. The sage-crew plugin lives in this repository, and Claude Code cannot find it if you add only the `marketplace.json` file's URL.
+
 | Plugin | What it does |
 |---|---|
-| [sage-crew](https://github.com/sageadvicellc/trellis-crew) | Sets up a small team of agent sessions that split work, hand off tasks, and report status. |
+| [trellis-crew](https://github.com/sageadvicellc/trellis-crew) | Sets up a small team of agent sessions that split work, hand off tasks, and report status. |
+| [sage-crew](plugins/sage-crew) | Runs a trellis-crew team the Sage way: decision comments with defaults, one status table per report, and a preset roles file. Installing it also installs trellis-crew. |
 
-The sage-crew skills keep their source name as a prefix. Call them as `trellis-crew:<skill>`, for example `trellis-crew:department-lead`.
+## sage-crew
 
-If you installed `trellis-crew@sage-freebies` before, run `claude plugin marketplace update sage-freebies`. Claude Code v2.1.193 or later then moves your settings to sage-crew. Then run `claude plugin install sage-crew@sage-freebies` once.
+sage-crew adds four skills to trellis-crew:
+
+| Skill | What it does |
+|---|---|
+| `sage-crew:start` | Starts a trellis-crew team with the sage-crew roles file |
+| `sage-crew:eject` | Copies the roles file to `./sagespec.yml`, so you can edit it and run `trellis-crew start` yourself |
+| `sage-crew:lead-decisions` | Poses each decision as its own comment, with a default that applies after eight hours |
+| `sage-crew:reporting-table` | Writes every report to the operator as one status table |
+
+The start skill needs the `trellis-crew` command line tool. Its install steps are in the [trellis-crew README](https://github.com/sageadvicellc/trellis-crew#readme).
+
+If you already write your own roles file, you do not need the start skill. Pass your file to `trellis-crew start --roles <file>`.
