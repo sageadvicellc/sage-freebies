@@ -11,8 +11,8 @@ The sage-crew roles file is at this path:
 
 This skill never deletes, moves, or overwrites a file.
 
-This skill runs POSIX shell commands. On Windows, run it from a POSIX
-shell such as Git Bash.
+This skill runs POSIX shell commands on a POSIX path. Run it on macOS,
+Linux, or WSL. On native Windows, the path check below stops it.
 
 Before any step, check the path above. It must start with `/`, and it
 must not hold the text `${` or a single quote. If it fails a check,
