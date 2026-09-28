@@ -19,5 +19,8 @@
       "category": "productivity",
       "keywords": ["multi-session", "agent-coordination", "trellis"]
     }
-  ]
+  ],
+  "renames": {
+    "trellis-crew": "sage-crew"
+  }
 }
