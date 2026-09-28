@@ -21,12 +21,16 @@ Before any step, check the path above. It must start with `/`, and it
 must not hold the text `${` or a single quote. If it fails a check,
 stop, and tell the operator in one line.
 
-1. Run `trellis-crew --help`. If the command is missing, or the help's
-   `start` line does not list both `--roles` and `--yes`, tell the
-   operator in one line
-   that the trellis-crew command line tool is not installed, and point
-   to https://github.com/sageadvicellc/trellis-crew#readme. Stop there.
-   Never install, download, or build the tool yourself.
+1. Run `trellis-crew --help`, and stop in either of these cases:
+   - If the command is missing, tell the operator in one line that the
+     trellis-crew command line tool is not installed.
+   - If the help's `start` line does not list both `--roles` and
+     `--yes`, tell the operator in one line that the installed tool is
+     too old, because this skill needs `start --roles` and `--yes`.
+
+   In both cases, point to
+   https://github.com/sageadvicellc/trellis-crew#readme. Never install,
+   download, update, or build the tool yourself.
 2. If a `sagespec.yml` file or link is in the current folder, follow
    "A roles file in this folder" below instead.
 3. Show the operator every session in the preset: its name, role, who
