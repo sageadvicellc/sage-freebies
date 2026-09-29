@@ -19,7 +19,7 @@ Add the marketplace by its repository name, as above. The sage-crew plugin lives
 
 ## sage-crew
 
-sage-crew adds five skills to trellis-crew:
+sage-crew adds seven skills to trellis-crew:
 
 | Skill | What it does |
 |---|---|
@@ -28,6 +28,8 @@ sage-crew adds five skills to trellis-crew:
 | `sage-crew:lead-decisions` | Poses each decision as its own comment, with a default that applies after eight hours |
 | `sage-crew:reporting-table` | Writes every report to the operator as one status table |
 | `sage-crew:researcher` | Runs a worker that answers one research question at a time from cited, dated sources |
+| `sage-crew:render` | Turns a small structured input into a responsive, self-contained HTML report and prints its local file link |
+| `sage-crew:report-templates` | Templates for PR bodies and review comments that stay inside what GitHub renders, with an optional link to a rendered report |
 
 The start skill needs the `trellis-crew` command line tool. Its install steps are in the [trellis-crew README](https://github.com/sageadvicellc/trellis-crew#readme).
 
