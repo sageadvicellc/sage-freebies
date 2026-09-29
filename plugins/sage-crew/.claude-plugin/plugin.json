@@ -1,7 +1,7 @@
 {
   "name": "sage-crew",
   "displayName": "sage-crew",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Runs a trellis-crew team the Sage way: decision comments with defaults, one status table per report, and a preset roles file you can start or eject.",
   "author": {
     "name": "Sage Advice LLC"
